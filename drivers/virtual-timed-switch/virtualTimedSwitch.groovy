@@ -101,12 +101,12 @@ def setTimeRemaining(seconds) {
         }
 
     }
-
-    def hours = (seconds / 3600) as int
+    def tempTime = seconds
+    def hours = (tempTime / 3600) as int
     if (hours > 0)
-        seconds = seconds.intValue() % 3600 // remove the hours component
-    def mins = (seconds / 60) as int
-    def secs = (seconds.intValue() % 60) as int
+        tempTime = tempTime.intValue() % 3600 // remove the hours component
+    def mins = (tempTime / 60) as int
+    def secs = (tempTime.intValue() % 60) as int
     if (hours > 0) {
         remaining = String.format('%d:%02d:%02d', hours, mins, secs)
     } else {
