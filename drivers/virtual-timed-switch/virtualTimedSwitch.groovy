@@ -1,5 +1,5 @@
 /**
- * 
+ * https://github.com/dsasse07/hubitat/blob/main/drivers/virtual-timed-switch/virtualTimedSwitch.groovy
  * Switch event code based on Virtual Switch uDTH Lite driver by sab0276:
  * _________________________________________________________________________________________________________________
 
