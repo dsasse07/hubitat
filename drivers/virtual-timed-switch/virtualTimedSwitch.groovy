@@ -160,27 +160,6 @@ def stop() {
     if (logEnable) log.info 'Timer stopped'
 }
 
-
-def installed() {
-}
-
-void logTxt(String msg) {
-	if (logEnable) log.info "${device.displayName} ${msg}"
-}
-
-//Use only if you are on 2.2.8.141 or later.  device.deleteCurrentState() is new to that version and will not work on older versions.  
-def configure(){  
-    logTxt "configured. State values reset."
-}
-
-/**
-*/
-
-/**
- ** TimedSession Methods
- **/
-
-
 /*
 def cancel() {
     if (logEnable) log.info 'Canceling timer'
@@ -237,4 +216,16 @@ def timerEvent() {
     } else {
         stop()
     }
+}
+
+def installed() {
+}
+
+void logTxt(String msg) {
+	if (logEnable) log.info "${device.displayName} ${msg}"
+}
+
+//Use only if you are on 2.2.8.141 or later.  device.deleteCurrentState() is new to that version and will not work on older versions.  
+def configure(){  
+    logTxt "configured. State values reset."
 }
